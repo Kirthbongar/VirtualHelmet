@@ -1,0 +1,28 @@
+# Claude / AI tool internal files
+.claude/
+*.claude
+.claudeignore
+CLAUDE.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Models (large binary files — store separately)
+models/*.tflite
+models/*.pb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Secrets / config with credentials
+secrets.yaml
