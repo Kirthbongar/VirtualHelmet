@@ -1,0 +1,65 @@
+node:
+  name: "brain"
+  ip: "192.168.10.1"
+
+mqtt:
+  broker_host: "127.0.0.1"  # simulation — change to 192.168.10.1 for hardware
+  broker_port: 1883
+
+voice:
+  wake_word: "cortana"
+  language_model: "brain/voice/models/vosk-model-small-en-us"
+  tts_model: "brain/voice/models/piper/en_US-lessac-medium.onnx"
+  mic_device_index: 0
+  sample_rate: 16000
+  chunk_size: 4000
+  command_timeout_s: 3
+  confidence_threshold: 0.80
+
+hud:
+  resolution: [800, 480]
+  target_fps: 30
+  theme: "halo_green"
+  brightness: 80
+  font: "assets/fonts/ShareTechMono-Regular.ttf"
+  font_size_large: 24
+  font_size_small: 16
+  data_stale_warning_s: 60
+  data_stale_offline_s: 120
+  show_compass: true
+  show_battery: true
+  show_temp: true
+  show_airquality: true
+  show_level: true
+  show_distance: true
+  show_gps: true
+
+audio:
+  bluetooth_device_mac: ""     # set on device after first pairing — do not commit
+  output_device: "default"
+  volume_music_pct: 65
+  volume_call_pct: 80
+  volume_tts_pct: 90
+  volume_power_save_pct: 40
+  tts_duck_music_pct: 20
+  auto_reconnect: true
+
+lidar:
+  port: "/dev/ttyAMA0"
+  baud: 115200
+  poll_hz: 10
+  min_strength: 100
+  publish_ft: true
+
+gps:
+  port: "/dev/ttyUSB0"
+  baud: 9600
+  update_rate_hz: 1
+  waypoint_file: "brain/gps/data/waypoints.json"
+  distance_units: "imperial"
+
+orchestrator:
+  boot_timeout_s: 30
+  node_offline_threshold_s: 120
+  startup_tts: true
+  alert_repeat_interval_s: 60
