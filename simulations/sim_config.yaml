@@ -1,0 +1,13 @@
+mqtt:
+  broker_host: "127.0.0.1"
+  broker_port: 1883
+
+simulation:
+  sensor_poll_hz: 10
+  power_poll_interval_s: 5
+  gps_poll_interval_s: 1
+  lidar_poll_hz: 10
+  battery_drain_rate_pct_per_min: 0.5   # drains battery slowly for testing
+  gps_start_lat: 36.174465
+  gps_start_lon: -86.767960
+  gps_drift_m_per_s: 0.5
