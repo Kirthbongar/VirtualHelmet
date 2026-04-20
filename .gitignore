@@ -1,3 +1,6 @@
+# Prompt files (AI-generated implementation prompts)
+prompts/
+
 # Claude / AI tool internal files
 .claude/
 *.claude
@@ -15,6 +18,7 @@ venv/
 # Models (large binary files — store separately)
 models/*.tflite
 models/*.pb
+brain/voice/models/
 
 # OS
 .DS_Store
